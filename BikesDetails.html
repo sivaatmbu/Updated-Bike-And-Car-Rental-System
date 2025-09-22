@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PPC-Bikes</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+    .navbar {
+  display: flex;
+  justify-content: center;
+  background: #007bff;
+  padding: 14px 0;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 123, 255, 0.5);
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+    .navbar a:hover,
+    .navbar a.active {
+      background-color: #0056b3;
+      color: #ffd54f;
+      box-shadow: 0 0 8px #ffd54f;
+    }
+    #bikes {
+      color: yellow;
+    }
+    img {
+      height: auto;
+      width: 100%;
+      border-radius: 8px;
+    }
+    .gallery {
+      background-color: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 8px;
+      transition: all 0.3s ease-in-out;
+    }
+    .gallery:hover {
+      border: 2px solid blue;
+      transform: scale(1.1);
+      background-color: gray;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    }
+    .desc {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 1.08em;
+      font-weight: 700;
+    }
+    .bikeinfo {
+      text-align: center;
+      margin-top: 4px;
+      color: #333;
+      font-size: 1em;
+    }
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .desc a button, .bikeinfo a button {
+      background-color: #37AFE1;
+      color: white;
+      font-weight: 900;
+      border: none;
+      outline: none;
+      border-radius: 20px;
+      padding: 3px 16px;
+      margin-top: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="bikes.html">Bikes</a>
+      <a href="cars.html">Cars</a>
+      <a href="offers.html">Special Offers</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <div class="gallery-container">
+    <div class="gallery">
+      <img src="./images/ktm.jpeg" alt="KTM" />
+      <div class="desc">KTM</div>
+      <div class="bikeinfo">30 kmpl | ₹100/hr</div>
+      <div class="bikeinfo">
+        <a href="BikeBook.html?name=KTM&mileage=30%20kmpl&price=100&image=./images/ktm.jpeg">
+          <button>Book now</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="./images/ns-200.jpeg" alt="NS-200" />
+      <div class="desc">NS-200</div>
+      <div class="bikeinfo">35 kmpl | ₹90/hr</div>
+      <div class="bikeinfo">
+        <a href="BikeBook.html?name=NS-200&mileage=35%20kmpl&price=90&image=./images/ns-200.jpeg">
+          <button>Book now</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="./images/royal-enfield.avif" alt="Royal Enfield" />
+      <div class="desc">Royal Enfield</div>
+      <div class="bikeinfo">40 kmpl | ₹150/hr</div>
+      <div class="bikeinfo">
+        <a href="BikeBook.html?name=Royal%20Enfield&mileage=40%20kmpl&price=150&image=./images/royal-enfield.avif">
+          <button>Book now</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="./images/avenger.jpeg" alt="Avenger" />
+      <div class="desc">Avenger</div>
+      <div class="bikeinfo">25 kmpl | ₹80/hr</div>
+      <div class="bikeinfo">
+        <a href="BikeBook.html?name=Avenger&mileage=25%20kmpl&price=80&image=./images/avenger.jpeg">
+          <button>Book now</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="./images/duke.webp" alt="Duke" />
+      <div class="desc">Duke</div>
+      <div class="bikeinfo">32 kmpl | ₹110/hr</div>
+      <div class="bikeinfo">
+        <a href="BikeBook.html?name=Duke&mileage=32%20kmpl&price=110&image=./images/duke.webp">
+          <button>Book now</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="./images/r15.jpeg" alt="R15" />
+      <div class="desc">R15</div>
+      <div class="bikeinfo">45 kmpl | ₹120/hr</div>
+      <div class="bikeinfo">
+        <a href="BikeBook.html?name=R15&mileage=45%20kmpl&price=120&image=./images/r15.jpeg">
+          <button>Book now</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="./images/himalayan.avif" alt="Himalayan" />
+      <div class="desc">Himalayan</div>
+      <div class="bikeinfo">30 kmpl | ₹100/hr</div>
+      <div class="bikeinfo">
+        <a href="BikeBook.html?name=Himalayan&mileage=30%20kmpl&price=100&image=./images/himalayan.avif">
+          <button>Book now</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="./images/honda_activa.jpeg" alt="Honda Activa" />
+      <div class="desc">Honda Activa</div>
+      <div class="bikeinfo">60 kmpl | ₹40/hr</div>
+      <div class="bikeinfo">
+        <a href="BikeBook.html?name=Honda%20Activa&mileage=60%20kmpl&price=40&image=./images/honda_activa.jpeg">
+          <button>Book now</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="./images/yamaha_FZ.jpeg" alt="Yamaha FZ" />
+      <div class="desc">Yamaha FZ</div>
+      <div class="bikeinfo">50 kmpl | ₹70/hr</div>
+      <div class="bikeinfo">
+        <a href="BikeBook.html?name=Yamaha%20FZ&mileage=50%20kmpl&price=70&image=./images/yamaha_FZ.jpeg">
+          <button>Book now</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="./images/bajaj_pulsar.jpeg" alt="Bajaj Pulsar" />
+      <div class="desc">Bajaj Pulsar</div>
+      <div class="bikeinfo">45 kmpl | ₹85/hr</div>
+      <div class="bikeinfo">
+        <a href="BikeBook.html?name=Bajaj%20Pulsar&mileage=45%20kmpl&price=85&image=./images/bajaj_pulsar.jpeg">
+          <button>Book now</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="./images/honda_Cb-shine_125cc.jpeg" alt="Honda CB Shine 125cc" />
+      <div class="desc">Honda CB Shine 125cc</div>
+      <div class="bikeinfo">55 kmpl | ₹60/hr</div>
+      <div class="bikeinfo">
+        <a href="BikeBook.html?name=Honda%20CB%20Shine%20125cc&mileage=55%20kmpl&price=60&image=./images/honda_Cb-shine_125cc.jpeg">
+          <button>Book now</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="./images/hero_glamour_f1.jpeg" alt="Hero Glamour F1" />
+      <div class="desc">Hero Glamour F1</div>
+      <div class="bikeinfo">50 kmpl | ₹75/hr</div>
+      <div class="bikeinfo">
+        <a href="BikeBook.html?name=Hero%20Glamour%20F1&mileage=50%20kmpl&price=75&image=./images/hero_glamour_f1.jpeg">
+          <button>Book now</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="./images/hero_splendor_plus_xtec.webp" alt="Hero Splendor Plus Xtec" />
+      <div class="desc">Hero Splendor Plus Xtec</div>
+      <div class="bikeinfo">60 kmpl | ₹40/hr</div>
+      <div class="bikeinfo">
+        <a href="BikeBook.html?name=Hero%20Splendor%20Plus%20Xtec&mileage=60%20kmpl&price=40&image=./images/hero_splendor_plus_xtec.webp">
+          <button>Book now</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="./images/tvs_jupiter.jpeg" alt="TVS Jupiter" />
+      <div class="desc">TVS Jupiter</div>
+      <div class="bikeinfo">55 kmpl | ₹50/hr</div>
+      <div class="bikeinfo">
+        <a href="BikeBook.html?name=TVS%20Jupiter&mileage=55%20kmpl&price=50&image=./images/tvs_jupiter.jpeg">
+          <button>Book now</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="./images/royal_enfield_hunter350.avif" alt="Royal Enfield Hunter 350" />
+      <div class="desc">Royal Enfield Hunter 350</div>
+      <div class="bikeinfo">38 kmpl | ₹140/hr</div>
+      <div class="bikeinfo">
+        <a href="BikeBook.html?name=Royal%20Enfield%20Hunter%20350&mileage=38%20kmpl&price=140&image=./images/royal_enfield_hunter350.avif">
+          <button>Book now</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="./images/ktm390_adventure.jpeg" alt="KTM 390 Adventure" />
+      <div class="desc">KTM 390 Adventure</div>
+      <div class="bikeinfo">30 kmpl | ₹150/hr</div>
+      <div class="bikeinfo">
+        <a href="BikeBook.html?name=KTM%20390%20Adventure&mileage=30%20kmpl&price=150&image=./images/ktm390_adventure.jpeg">
+          <button>Book now</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="./images/yamaha_mt09.jpeg" alt="Yamaha MT-09" />
+      <div class="desc">Yamaha MT-09</div>
+      <div class="bikeinfo">28 kmpl | ₹160/hr</div>
+      <div class="bikeinfo">
+        <a href="BikeBook.html?name=Yamaha%20MT-09&mileage=28%20kmpl&price=160&image=./images/yamaha_mt09.jpeg">
+          <button>Book now</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="./images/bajaj_pulsar_rs200.jpeg" alt="Bajaj Pulsar RS200" />
+      <div class="desc">Bajaj Pulsar RS200</div>
+      <div class="bikeinfo">35 kmpl | ₹120/hr</div>
+      <div class="bikeinfo">
+        <a href="BikeBook.html?name=Bajaj%20Pulsar%20RS200&mileage=35%20kmpl&price=120&image=./images/bajaj_pulsar_rs200.jpeg">
+          <button>Book now</button>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

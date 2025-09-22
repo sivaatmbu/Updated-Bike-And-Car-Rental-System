@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Car Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+    .container {
+      max-width: 700px;
+      background: white;
+      padding: 20px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .car-image {
+      width: 100%;
+      height: 250px;
+      object-fit: contain;
+      border: 1px solid #ddd;
+      margin-bottom: 15px;
+      display: block;
+      border-radius: 8px;
+    }
+    .details, .form-section {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="date"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 15px;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #388E3C;
+    }
+    #amount {
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 18px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Car Booking</h1>
+    <div class="car-image-container">
+      <img id="carImage" class="car-image" src="" alt="Selected Car" />
+    </div>
+    <div class="details">
+      <p><strong>Name:</strong> <span id="carName">N/A</span></p>
+      <p><strong>Mileage:</strong> <span id="carMileage">N/A</span></p>
+      <p><strong>Price/Hour:</strong> ₹<span id="carPrice">0</span></p>
+    </div>
+    <form id="bookingForm" method="POST" action="book_vehicle.php" onsubmit="return validateAndSubmit()">
+      <input type="hidden" name="vehicle_type" value="car" />
+      <input type="hidden" id="vehicleNameInput" name="vehicle_name" value="" />
+      <label for="license">License Number</label>
+      <input type="text" id="license" name="license_number" required />
+      <label for="aadhar">Aadhar Number</label>
+      <input type="text" id="aadhar" name="aadhar_number" pattern="\d{12}" maxlength="12" required />
+      <label for="booking_date">Select Date</label>
+      <input type="date" id="booking_date" name="booking_date" required />
+      <label for="hours">Number of Hours</label>
+      <input type="number" id="hours" name="hours" min="1" required />
+      <label for="vehicle_count">Number of Cars</label>
+      <input type="number" id="vehicle_count" name="vehicle_count" min="1" required />
+      <div id="amount"></div>
+      <input type="hidden" id="total_amount" name="total_amount" />
+      <button type="button" onclick="calculateAmount()">Calculate Amount</button>
+      <button type="submit">Book Now</button>
+    </form>
+  </div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const name = params.get("name") || "N/A";
+  const mileage = params.get("mileage") || "N/A";
+  const price = params.get("price") || "0";
+  const image = params.get("image") || "https://via.placeholder.com/300x200?text=Car";
+
+  document.getElementById("carName").innerText = name;
+  document.getElementById("carMileage").innerText = mileage;
+  document.getElementById("carPrice").innerText = price;
+  document.getElementById("carImage").src = image;
+  document.getElementById("vehicleNameInput").value = name;
+
+  let totalAmount = 0;
+
+  function calculateAmount() {
+    const hours = parseInt(document.getElementById("hours").value);
+    const count = parseInt(document.getElementById("vehicle_count").value);
+    const pricePerHour = parseInt(price);
+
+    if (isNaN(hours) || hours <= 0) {
+      alert("Please enter a valid number of hours.");
+      return;
+    }
+    if (isNaN(count) || count <= 0) {
+      alert("Please enter a valid number of cars.");
+      return;
+    }
+    totalAmount = hours * count * pricePerHour;
+    document.getElementById("amount").innerText = `Total Amount: ₹${totalAmount}`;
+    document.getElementById("total_amount").value = totalAmount;
+  }
+
+  function validateAndSubmit() {
+    if (totalAmount <= 0) {
+      alert("Please calculate the amount before booking.");
+      return false;
+    }
+    return true;
+  }
+
+  // Set booking date default to today
+  const bookingDateInput = document.getElementById("booking_date");
+  bookingDateInput.value = new Date().toISOString().split('T')[0];
+</script>
+</body>
+</html>

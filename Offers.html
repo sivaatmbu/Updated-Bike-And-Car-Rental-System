@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: #007bff;
+            padding: 14px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 123, 255, 0.5);
+            margin-bottom: 25px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            padding: 8px 15px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            position: relative;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            background-color: #0056b3;
+            color: #ffd54f;
+            box-shadow: 0 0 8px #ffd54f;
+        }
+
+        #offer{
+            background-color: white;
+            color: red;
+            font-weight: 800;
+            cursor: none;
+        }
+        form {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        img {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            float: right;
+            margin-top: -60px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            form {
+                width: 90%;
+                padding: 15px;
+            }
+            img {
+                height: 50px;
+                width: 50px;
+                margin-top: -30px;
+            }
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #444444;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        li {
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #555555;
+        }
+        span, h1 {
+            background-color: #e5e5e5;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        form ul li::marker {
+            color: #2b8fd6;
+        }
+        form ul {
+            margin-bottom: 20px;
+        }
+        form {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="./HomePage.html">Home</a>
+        <a href="./BikesDetails.html">Bikes</a>
+        <a href="./CarsDetails.html">Cars</a>
+        <a href="./Offers.html" class="active">Special Offer</a>
+        <a href="./ContactUs.html">Contact Us</a>
+    </nav>
+    <form>
+        <span><h1>OFFERS:</h1></span>
+        <img src="https://via.placeholder.com/100x100/FF6B35/FFFFFF?text=OFFERS" alt="Offer Image">
+        <h2>Hourly and Daily Rentals:</h2>
+        <ul>
+            <li>Special Offers: Look for multi-day rentals where you can get the 3rd or 4th day free, common in tourist-heavy areas.</li>
+            <li>Seasonal Promotions: Some places offer discounts during off-peak times (e.g., weekday rentals are cheaper than weekends).</li>
+        </ul>
+        <h2>Group and Family Discounts:</h2>
+        <ul>
+            <li>Group Rentals: Booking multiple bikes together can often get you a discount.</li>
+            <li>Family Offers: Some places have family deals where children's bikes are rented at lower prices or free with adult rentals.</li>
+        </ul>
+        <h2>Student Discounts:</h2>
+        <ul>
+            <li>Local Bike Shops: Many local bike rental shops offer discounts for students, especially those near universities or campuses. These discounts typically range from 10% to 20% off daily, weekly, or even monthly rentals.</li>
+            <li>Student ID Requirement: Most places will require you to show a valid student ID to access the discount.</li>
+        </ul>
+        <h2>Memberships and Loyalty Programs:</h2>
+        <ul>
+            <li>Frequent Rider Memberships: Some services have tiered pricing for frequent users, with rewards or free hours after accumulating rentals.</li>
+            <li>First-Time Discounts: Some services offer a percentage off or free first rides for signing up.</li>
+        </ul>
+    </form>
+</body>
+</html>

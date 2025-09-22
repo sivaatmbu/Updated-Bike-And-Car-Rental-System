@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cars Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    .navbar {
+  display: flex;
+  justify-content: center;
+  background: #007bff;
+  padding: 14px 0;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 123, 255, 0.5);
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: #0056b3;
+  color: #ffd54f;
+  box-shadow: 0 0 8px #ffd54f;
+}
+
+    #cars {
+      color: yellow;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      background: white;
+      width: 220px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+    }
+    .card p {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: #444;
+    }
+    .card a {
+      display: block;
+      padding: 10px 0;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .card a:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+  <a href="./HomePage.html">Home</a>
+  <a href="./BikesDetails.html">Bikes</a>
+  <a href="./CarsDetails.html" class="active">Cars</a>
+  <a href="./Offers.html">Special Offers</a>
+  <a href="./ContactUs.html">Contact Us</a>
+</nav>
+  <div class="gallery">
+
+    <div class="card">
+      <img src="./images/mahindra_XUV700.webp" alt="Mahindra XUV700" />
+      <h3>Mahindra XUV700</h3>
+      <p>15 kmpl | ₹120/hr</p>
+      <a href="CarBook.html?name=Mahindra+XUV700&mileage=15+kmpl&price=120&image=./images/mahindra_XUV700.webp">Book Now</a>
+    </div>
+
+    <div class="card">
+      <img src="./images/mahindra_Bolero_neo.jpeg" alt="Mahindra Bolero Neo" />
+      <h3>Mahindra Bolero Neo</h3>
+      <p>17 kmpl | ₹100/hr</p>
+      <a href="CarBook.html?name=Mahindra+Bolero+Neo&mileage=17+kmpl&price=100&image=./images/mahindra_Bolero_neo.jpeg">Book Now</a>
+    </div>
+
+    <div class="card">
+      <img src="./images/Mahindra Thar.webp" alt="Mahindra Thar" />
+      <h3>Mahindra Thar</h3>
+      <p>13 kmpl | ₹150/hr</p>
+      <a href="CarBook.html?name=Mahindra+Thar&mileage=13+kmpl&price=150&image=./images/Mahindra%20Thar.webp">Book Now</a>
+    </div>
+
+    <div class="card">
+      <img src="./images/Tata_Punch.jpeg" alt="Tata Punch" />
+      <h3>Tata Punch</h3>
+      <p>18 kmpl | ₹90/hr</p>
+      <a href="CarBook.html?name=Tata+Punch&mileage=18+kmpl&price=90&image=./images/Tata_Punch.jpeg">Book Now</a>
+    </div>
+
+    <div class="card">
+      <img src="./images/Tata_Tiago_XZ_Plus.webp" alt="Tata Tiago XZ Plus" />
+      <h3>Tata Tiago XZ Plus</h3>
+      <p>20 kmpl | ₹85/hr</p>
+      <a href="CarBook.html?name=Tata+Tiago+XZ+Plus&mileage=20+kmpl&price=85&image=./images/Tata_Tiago_XZ_Plus.webp">Book Now</a>
+    </div>
+
+    <div class="card">
+      <img src="./images/Mahindra_Scorpio.jpeg" alt="Mahindra Scorpio" />
+      <h3>Mahindra Scorpio</h3>
+      <p>14 kmpl | ₹110/hr</p>
+      <a href="CarBook.html?name=Mahindra+Scorpio&mileage=14+kmpl&price=110&image=./images/Mahindra_Scorpio.jpeg">Book Now</a>
+    </div>
+
+    <div class="card">
+      <img src="./images/maruti_Suzuki.jpeg" alt="Maruti Suzuki" />
+      <h3>Maruti Suzuki</h3>
+      <p>22 kmpl | ₹75/hr</p>
+      <a href="CarBook.html?name=Maruti+Suzuki&mileage=22+kmpl&price=75&image=./images/maruti_Suzuki.jpeg">Book Now</a>
+    </div>
+
+    <div class="card">
+      <img src="./images/kia_seltos.jpeg" alt="Kia Seltos" />
+      <h3>Kia Seltos</h3>
+      <p>16 kmpl | ₹120/hr</p>
+      <a href="CarBook.html?name=Kia+Seltos&mileage=16+kmpl&price=120&image=./images/kia_seltos.jpeg">Book Now</a>
+    </div>
+
+    <div class="card">
+      <img src="./images/hyundai_i20.jpeg" alt="Hyundai i20" />
+      <h3>Hyundai i20</h3>
+      <p>19 kmpl | ₹95/hr</p>
+      <a href="CarBook.html?name=Hyundai+i20&mileage=19+kmpl&price=95&image=./images/hyundai_i20.jpeg">Book Now</a>
+    </div>
+
+    <div class="card">
+      <img src="./images/Tata_nexon EV.jpeg" alt="Tata Nexon EV" />
+      <h3>Tata Nexon EV</h3>
+      <p>15 kmpl | ₹130/hr</p>
+      <a href="CarBook.html?name=Tata+Nexon+EV&mileage=15+kmpl&price=130&image=./images/Tata_nexon%20EV.jpeg">Book Now</a>
+    </div>
+
+    <div class="card">
+      <img src="./images/mg_zs_ev.jpeg" alt="MG ZS EV" />
+      <h3>MG ZS EV</h3>
+      <p>17 kmpl | ₹125/hr</p>
+      <a href="CarBook.html?name=MG+ZS+EV&mileage=17+kmpl&price=125&image=./images/mg_zs_ev.jpeg">Book Now</a>
+    </div>
+
+    <div class="card">
+      <img src="./images/kia_carens.jpeg" alt="Kia Carens" />
+      <h3>Kia Carens</h3>
+      <p>18 kmpl | ₹115/hr</p>
+      <a href="CarBook.html?name=Kia+Carens&mileage=18+kmpl&price=115&image=./images/kia_carens.jpeg">Book Now</a>
+    </div>
+
+  </div>
+</body>
+</html>
